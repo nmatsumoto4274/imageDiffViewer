@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>ImageDiffSample</title>
+</head>
+
+<body>
+    <div class="position_Box">
+        <div class="relative">
+            <img src="./image/base.png" alt="" />
+            <img src="./image/extention/1.png" alt="" class="absolute" id="ex_1" />
+            <img src="./image/extention/2.png" alt="" class="absolute" id="ex_2" />
+            <img src="./image/extention/3.png" alt="" class="absolute" id="ex_3" />
+        </div>
+        <p>
+            <input type="checkbox" name="swimsuit_radio" id="swimsuit_radio" onclick="set_swim()" checked>水着
+        </p>
+        <p>
+            <input type="checkbox" name="man_radio" id="man_radio" onclick="set_man()" checked>男
+        </p>
+    </div>
+</body>
+
+</html>
+
+<script>
+    var set_swim = function() {
+        var flg = document.getElementById('swimsuit_radio');
+
+        if (flg.checked) {
+            document.getElementById('ex_1').style.visibility = 'visible';
+            document.getElementById('ex_2').style.visibility = 'visible';
+        } else {
+            document.getElementById('ex_1').style.visibility = 'hidden';
+            document.getElementById('ex_2').style.visibility = 'hidden';
+        }
+    }
+
+    var set_man = function() {
+        var flg = document.getElementById('man_radio');
+
+        if (flg.checked) {
+            document.getElementById('ex_3').style.visibility = 'visible';
+        } else {
+            document.getElementById('ex_3').style.visibility = 'hidden';
+        }
+    }
+</script>
