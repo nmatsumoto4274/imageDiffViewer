@@ -1,0 +1,25 @@
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+img {
+    width: 30vw;
+}
+
+body {
+    background-color: #272727;
+    color: #cccccc;
+}
+
+.position_Box {
+    position: relative;
+    width: 600px;
+    height: 300px;
+    margin: 0 auto;
+}
